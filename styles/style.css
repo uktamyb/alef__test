@@ -190,10 +190,6 @@ ul {
 } */
 
 @media only screen and (max-width: 767px) {
-  .container {
-    width: 100%;
-  }
-
   .top__header {
     display: flex;
     justify-content: space-between;
