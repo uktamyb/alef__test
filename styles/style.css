@@ -265,3 +265,79 @@ ul {
     display: none;
   }
 }
+@media only screen and (max-width: 575px) {
+  .container {
+    width: 92%;
+  }
+
+  .top__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1180px;
+  }
+
+  .nav__item a {
+    font-size: 30px;
+    font-weight: 800;
+  }
+
+  .nav__items {
+    position: fixed;
+    left: -100%;
+    top: 15.5rem;
+    flex-direction: column;
+    background-color: #0d1b24;
+    width: 95%;
+    border-radius: 10px;
+    text-align: start;
+    transition: 0.5s;
+    box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+  }
+
+  .nav__items.active {
+    left: 0;
+  }
+
+  .nav__item {
+    margin: 2.5rem 0;
+  }
+
+  .hamburger {
+    display: inline-block;
+    cursor: pointer;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(18px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-18px) rotate(-45deg);
+  }
+
+  .phone {
+    width: 80px;
+    height: fit-content;
+    margin: 90px 0 0 0;
+  }
+
+  .call__now {
+    margin-top: 20px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .phone a,
+  .fa-phone {
+    display: block;
+  }
+
+  .phone__number {
+    display: none;
+  }
+}
