@@ -4,8 +4,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Styles -->
+
     <link rel="stylesheet" href="css/col.css" />
     <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/content.css" />
+
     <!-- Montserrat font -->
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -70,11 +75,20 @@
       <!-- Header end -->
       <!-- Content -->
       <div class="content">
-        <div class="row sort">
-          <form action=""></form>
+        <div class="sort">
+          <p>Сортировать по:</p>
+          <select id="sort">
+            <option value="price">Цене</option>
+            <option value="age">Возрасту</option>
+          </select>
+          <select id="sort">
+            <option value="age">Возрасту</option>
+            <option value="price">Цене</option>
+          </select>
         </div>
-        <div class="row main__content">Картинки</div>
-        <div class="row subscribe">подписка</div>
+        <div class="main__content"></div>
+        <div class="view__more"></div>
+        <div class="subscribe">подписка</div>
       </div>
       <!-- Content end -->
     </div>
@@ -88,5 +102,6 @@
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
     <script src="./script/index.js"></script>
+    <script src="./script/cards.js"></script>
   </body>
 </html>
