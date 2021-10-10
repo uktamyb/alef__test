@@ -14,6 +14,7 @@ ul {
 }
 
 .container {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -21,7 +22,6 @@ ul {
   width: 1440px;
   height: 2056px;
   margin: 0 auto;
-  border: 1px solid green;
 }
 
 .header {
@@ -33,6 +33,7 @@ ul {
     url("../img/header/cat3.png") rgba(10, 37, 65, 0.79);
   background-repeat: no-repeat;
   background-position: center;
+  /* margin-top: -150px; */
 }
 
 .top__header {
@@ -150,7 +151,7 @@ ul {
 
 .content {
   width: 1180px;
-  height: 1690px;
+  height: 1804px;
 }
 
 .sort {
@@ -176,20 +177,15 @@ ul {
 
 .subscribe {
   display: flex;
-  justify-content: center;
   width: 100%;
   height: 312px;
+  background-color: #1f2021;
 }
 
-/* Content end */
-
-/* @media only screen and (max-width: 991px) {
-  .container {
-    background-color: blue;
-  }
-} */
-
 @media only screen and (max-width: 767px) {
+  .container {
+    margin: 0;
+  }
   .top__header {
     display: flex;
     justify-content: space-between;

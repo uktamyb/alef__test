@@ -36,3 +36,23 @@ for (let i = 0; i < titlearray.length; i++) {
   let bgimg = document.getElementById(`cards${i}`);
   bgimg.style.backgroundImage = `url("../img/Cards/${titlearray[i]}.svg")`;
 }
+
+// Sort
+
+function getSelectValue() {
+  let selectedValue = document.getElementById("sort").value;
+  console.log(selectedValue);
+}
+getSelectValue();
+
+// Load more
+
+let cardarray = [];
+
+$(".main__content").slice(0, 3).show();
+$(".load__more").on("click", function () {
+  $(".main__content:hidden").slice(0, 3).slideDown();
+  if ($(".main__content").length == 0) {
+    $(".load__more").fadeOut("slow");
+  }
+});
