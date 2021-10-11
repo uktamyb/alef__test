@@ -1,28 +1,23 @@
 // Email
 
-$(document).ready(function () {
-  $("#email").on("focusout", function () {
-    if ($("#email").val() != "") {
-      if (validateEmail($("#email").val())) {
-        $(".error").fadeOut("slow");
-      } else {
-        $(".error").text("Invalid Email...!");
-        $(".error").fadeIn("slow");
-      }
-    } else {
-      $(".error").text("Email Required..!");
-      $(".error").fadeIn("slow");
-    }
-  });
-});
+const email = document.querySelector("#email");
+const icon1 = document.querySelector(".icon1");
+const icon2 = document.querySelector(".icon2");
+const error = document.querySelector(".error__text");
+const btn = document.querySelector(".sub__btn");
 
-function validateEmail(eVal) {
-  var val =
-    /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
+let emailCode = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
 
-  if (val.test(eVal)) {
-    return true;
+function check() {
+  if (email.value.match(emailCode)) {
+    email.style.borderColor = "#27ae60";
+    icon1.style.display = "none";
+    icon2.style.display = "block";
+    error.style.display = "none";
   } else {
-    return false;
+    email.style.borderColor = "#f79489";
+    icon1.style.display = "block";
+    icon2.style.display = "none";
+    error.style.display = "block";
   }
 }

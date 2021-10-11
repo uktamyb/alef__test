@@ -90,10 +90,7 @@
         <div class="main__content"></div>
         <div class="view__more">
           <button class="load__more">Показать еще 20</button>
-          <!-- <img
-            class="gototop"
-            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/NlyAAAAAXNSR0IArs4c6QAAAj9JREFUaEPtmktSAjEQhjsDrPUI7BVLTqAsoMpb6AGgxhOIJ3CEA+gtrIKFegIt0bUcAdY8YoVydEQmyZCkJ0DPOo/+8ncnnUwz2LGP7RgvEPC2K04Kk8JbtgLaLh0+vJTnpdIJcF72ag0YGwaTyXN0Vh3q2KUF3OoPrgCgrTNgTm1GwKHdaVRuVfMrgVv9gQAVwN5/HNhlt34YyQyVAi/cuFj89J7018BRMJ1WZe4tBW723s4ZY3cbBAyc84tu4+g+zWYp8Ca5cwLwulOvpO43BJx0BVJ4M4KZXDqpE8UwxbCDLEuclWJhHZ3xfsVwMjFwlNj4A7wqC3IA7QewLOWzDJ0/sCq/FfFsETpfYB3Y+GSwBJ0fcBZYi9D5AKtiVgCmXeMMlcYHVsHG569uu4wpPC5wVois7TXg8YDXNX7dfinwOMCmRpv2R33xsGWspXHcKmzJyB+BLIznFHgU8KAWNQ5el+PJ5GhJgw57H8dzNn8EgH3J5uUUWMz7D9oENgZZhtaEFd2dA/+BtgG7DJ0BFg14AQ0A4jeH7X9QYrxQ4cZJD0dRWCMfQGtCwPRqmeZs9OcBLQyNJqIYphimGP5eAdq0jPYStM60aWlvWjYvAlj6qp6Gt61saRwUp+WoVhUXmZWfsjCt2X8PGfAbLIVM5jEuTIsn/4YW17Q9E4Mc9h1zYG1VFZ6YX6lwbKSoypsVCqeMMa+KSznnw8Js9mS1uNShMuhDayuMbpmjCQnY0cJ6Mywp7I0UjgzZOYW/AJKP3kx8LQGtAAAAAElFTkSuQmCC"
-          /> -->
+
           <a href="#"><i class="fas fa-chevron-up"></i></a>
         </div>
         <div class="subscribe">
@@ -102,16 +99,27 @@
             <p>Подпишись и успей словить всей акции</p>
           </div>
           <div class="subscribe__forms">
-            <form action="/action_page.php">
-              <input
-                class="sub__input"
-                type="email"
-                id="email"
-                name="email"
-                placeholder="Email"
-              />
+            <div class="forms">
+              <div class="error__text">
+                Пожалуйста, введите действующий адрес электронной почты
+              </div>
+              <div class="sub__input">
+                <input
+                  onkeyup="check()"
+                  type="text"
+                  id="email"
+                  placeholder="Введите электронную почту"
+                />
+                <div class="icons">
+                  <span class="icon1 fas fa-exclamation"></span>
+                  <span class="icon2 fas fa-check"></span>
+                </div>
+              </div>
 
-              <input class="sub__btn" type="submit" />
+              <button class="sub__btn">Подписаться</button>
+
+              <br />
+              <br />
               <input
                 class="check__b"
                 type="checkbox"
@@ -120,7 +128,7 @@
               />
 
               <span class="check__span"> Подписаться на новости</span>
-            </form>
+            </div>
           </div>
         </div>
       </div>

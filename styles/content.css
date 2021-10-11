@@ -145,73 +145,91 @@
 }
 
 .subscribe__forms {
+  width: 55%;
+  height: 100%;
+}
+
+.forms {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
-  width: 55%;
+  width: 100%;
   height: 100%;
   padding: 91px 0px 119px 0px;
 }
 
 .sub__input {
+  display: flex;
+  position: relative;
   width: 300px;
   height: 65px;
-  background: #ffffff;
-  border-radius: 10px;
   margin: 0 16px 24px 0;
-  padding-left: 33px;
+  border-radius: 10px;
+}
+.sub__input input {
+  width: 100%;
+  height: 100%;
+  padding-left: 10px;
   outline: none;
+  font-size: 14px;
+  border-radius: 10px;
 }
 
-.error {
+.sub__input .icons {
+  display: flex;
   position: absolute;
-  top: -110%;
-  left: 31%;
-  padding: 1% 20%;
-  border-radius: 3px;
-  background-color: #fdcac4;
-  color: #ed6160;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+}
+
+.sub__input .icons span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
   display: none;
 }
 
-.error::before {
-  content: "";
-  width: 0;
-  height: 0;
-  border-left: 9px solid transparent;
-  border-right: 9px solid transparent;
+.icon1 {
+  color: #e74c3c;
+  border: #e74c3c;
+  margin-right: 5px;
+  border-radius: 50%;
+  border: 2px solid;
+  padding: 2px 0 0 8px;
+}
 
-  border-top: 9px solid #fdcac4;
+.icon2 {
+  color: #27ae60;
+  border: #27ae60;
+  border-radius: 50%;
+  border: 2px solid;
+  padding: 2px 0 0 3px;
+}
+
+.error__text {
+  position: relative;
   position: absolute;
-  bottom: -21%;
-  left: 10%;
+  top: 45px;
+  background: #e74c3c;
+  color: #fceae8;
+  font-size: 15px;
+  padding: 8px;
+  border-radius: 5px;
+  display: none;
 }
 
-.error:nth-child(2) {
-  top: 70px;
-  background-color: #d9f0fd;
-}
-
-.error:nth-child(2)::before {
-  border-top: 9px solid #d9f0fd;
-}
-
-.error:nth-child(3) {
-  top: 140px;
-  padding: 1% 18%;
-  background-color: #6dffa7;
-}
-
-.error:nth-child(3)::before {
-  border-top: 9px solid #6dffa7;
-}
-
-.error:nth-child(4) {
-  top: 210px;
-  background-color: #ffd866;
-}
-
-.error:nth-child(4)::before {
-  border-top: 9px solid #ffd866;
+.error__text:before {
+  position: absolute;
+  content: "";
+  height: 15px;
+  width: 15px;
+  background: #e74c3c;
+  left: 20px;
+  bottom: -7px;
+  transform: rotate(45deg);
 }
 
 .sub__btn {
