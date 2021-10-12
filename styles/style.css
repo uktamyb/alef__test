@@ -167,7 +167,17 @@ ul {
   justify-content: space-between;
 }
 
+.main__content .card__description {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  border-left: 4px solid #6ebbd3;
+  margin: 22px 0 22px 0;
+  padding-left: 18px;
+}
+
 .view__more {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -176,6 +186,7 @@ ul {
 }
 
 .subscribe {
+  position: relative;
   display: flex;
   width: 100%;
   height: 312px;
@@ -255,5 +266,15 @@ ul {
 
   .phone__number {
     display: none;
+  }
+
+  .main__content {
+    margin-bottom: 550px;
+  }
+
+  .subscribe {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
   }
 }
